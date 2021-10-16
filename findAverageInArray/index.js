@@ -1,0 +1,1 @@
+console.log("Find the average of an array!")
