@@ -16,6 +16,7 @@ const anagrams = (string1, string2) => {
 const sortString = (string) => {
     return string.split('').sort().join('')
 }
+// Array.sort uses merge sort so its time complexity is O(nlogn).
 
 
 console.log("result of listen, and silent being compared", anagrams("listen", "silent"))
