@@ -25,3 +25,5 @@ const countDuplicate = (array) => {
     console.log(counts);
 }
 countDuplicate(array);
+
+// finish up solutions for this one! 
