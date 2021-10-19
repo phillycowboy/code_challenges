@@ -107,3 +107,5 @@ const checkDuplicateTwo = () => {
 }
 checkDuplicateTwo();
 
+
+// finish blog tomorrow with solutions and look at hackerrank algo page and look those up. 
