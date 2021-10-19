@@ -108,4 +108,23 @@ const checkDuplicateTwo = () => {
 checkDuplicateTwo();
 
 
-// finish blog tomorrow with solutions and look at hackerrank algo page and look those up. 
+//checking for duplicates with both starting and ending indexes of an array
+
+const checkDuplicateThree = () => {
+    let array5 = ["abc", "xy", "bb", "abc"];
+    let result = false;
+    // iterate over the array 
+    for(let i = 0; i < array5.length; i++){
+        if(array5.indexOf(array5[i]) !== array5.lastIndexOf(array5[i])){
+            result = true;
+            // terminate the loop 
+            break;
+        }
+    }
+    if(result){
+        console.log("array5 contains duplicate elements");
+    }else{
+        console.log("array5 does not contain duplicate elements");
+    }
+}
+checkDuplicateThree();
