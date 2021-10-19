@@ -109,6 +109,7 @@ checkDuplicateTwo();
 
 
 //checking for duplicates with both starting and ending indexes of an array
+// START TAKING NOTES HERE
 
 const checkDuplicateThree = () => {
     let array5 = ["abc", "xy", "bb", "abc"];
@@ -128,3 +129,15 @@ const checkDuplicateThree = () => {
     }
 }
 checkDuplicateThree();
+
+//solution using some -- the some function checks every elememt in the array for some condition that we give it. it take three arrguments, the array, an element of the 
+// array and an index of the array, it is called once it returns false, when it retturns true it is not called
+
+const findSome = () => {
+    let array6 = ["abc", "xy", "bb", "abc"];
+    let result = false;
+    // call some function with callback function as argument.
+    result = array6.some((element, index) => array6.indexOf(element) !== index);
+    result ? console.log("array6 contains duplicate elements") : console.log("array6 does not contain duplicate elements");
+}
+findSome();
