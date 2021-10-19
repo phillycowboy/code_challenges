@@ -78,9 +78,32 @@ const checkDuplicate = () => {
         map[array3[i]] = true;
     }
     if(result){
-        console.log("Array contains duplicate elements");
+        document.write("Array contains duplicate elements");
     }else{
-        console.log("Array does not contain duplicate elements");
+        document.write("Array does not contain duplicate elements");
     }
 }
 checkDuplicate();
+
+// 4th solution using Set 
+// a Set object can be created with array values by directly supplying the array to its constructor 
+// if the array has duplicate values, then they will be removed by the Set. This means that the Set will only contain unique array elements 
+// note the orgiinal array will not be modified. 
+
+const checkDuplicateTwo = () => {
+    let array4 = ["abc", "xy", "bb", "axz", "abc"];
+    let result = false;
+    // create a Set with array elements 
+    const s = new Set(array4);
+    // compare the size of the array and Set 
+    if(array4.length !== s.size){
+        result = true;
+    }
+    if(result){
+        console.log("Array contains duplicate elements")
+    }else{
+        console.log("Array does not contain duplicate elements")
+    }
+}
+checkDuplicateTwo();
+
