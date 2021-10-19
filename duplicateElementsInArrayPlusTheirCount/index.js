@@ -27,3 +27,29 @@ const countDuplicate = (array) => {
 countDuplicate(array);
 
 // finish up solutions for this one! 
+
+// solution with forEach loop and for loop 
+
+const array2 = ["pencil", "book", "pencil", "pencil"]
+
+const countDuplicateTwo = (array2) => {
+    const count = {};
+    const result = [];
+
+    array2.forEach(item => {
+        if(count[item]){
+            count[item] += 1;
+            return 
+        }
+        count[item] = 1;
+    });
+
+    for(let prop in count){
+        if(count[prop] >= 2){
+            result.push(prop)
+        }
+    }
+    console.log(count)
+    return result;
+}
+countDuplicateTwo(array2)
