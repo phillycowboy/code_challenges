@@ -53,3 +53,34 @@ const countDuplicateTwo = (array2) => {
     return result;
 }
 countDuplicateTwo(array2)
+
+// third solution 
+
+// declare an empty object 
+// iterate over the array using a for loop 
+// in every iteration add a new entry in the object created in step 1 with the array element as key and with some fixed value 
+// check for the presence of an entry in the object with the current array element as a key 
+// if an entry is already there, means that the array had another element with the same value and terminate the loop 
+
+const checkDuplicate = () => {
+    let array3 = ["abc", "xy", "bb", "axz", "abc"];
+    // empty object 
+    let map = {};
+    let result = false;
+    for(let i = 0; i < array3.length; i++){
+        // check if object contains entry with this element as key 
+        if(map[array3[i]]){
+            result = true;
+            // terminate the loop 
+            break;
+        }
+        // add entry in object with the element as key 
+        map[array3[i]] = true;
+    }
+    if(result){
+        console.log("Array contains duplicate elements");
+    }else{
+        console.log("Array does not contain duplicate elements");
+    }
+}
+checkDuplicate();
