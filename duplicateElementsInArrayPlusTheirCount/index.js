@@ -141,3 +141,28 @@ const findSome = () => {
     result ? console.log("array6 contains duplicate elements") : console.log("array6 does not contain duplicate elements");
 }
 findSome();
+
+// solution using a nested for loop 
+
+const nestedFor = () => {
+    let array7 = ["abc", "xy", "bb", "abc"];
+    let result = false;
+    for(let i = 0; i < array7.length; i++){
+        // nested loop 
+        for(let j = 0; j < array7.length; j++){
+            if(i !== j){
+                if(array7[i] === array7[j]){
+                    result = true;
+                    break;
+                }
+            }
+        }
+        if(result){
+            break;
+        }
+    }
+    result ? console.log("Array contains duplicate elements") : console.log("Array does not contain duplicate elements");
+}
+nestedFor();
+
+// using a nested for loop comparing each element on the index useful for 2d arrays as well 
