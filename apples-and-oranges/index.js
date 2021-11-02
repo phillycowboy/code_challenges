@@ -10,3 +10,20 @@ console.log("Apples and Oranges Solution");
 
 // given the d value of m apples and n oranges determine how many apples and oranges will fall on sams house(i.e the inclusive range of [s,t])
 
+function countApplesAndOranges(s, t, a, b, apples, oranges){
+    let appleCount = 0;
+    let orangeCount = 0;
+
+    for(let i = 0; i < apples.length; i++){
+        if(a + apples[i] >= s && a + apples[i] <= t){
+            appleCount += 1;
+        }
+    }
+    for(let i = 0; i < oranges.length; i++){
+        if(b + oranges[i] >= s && b + oranges[i] <= t){
+            orangeCount += 1;
+        }
+    }
+    console.log(appleCount);
+    console.log(orangeCount);
+}
